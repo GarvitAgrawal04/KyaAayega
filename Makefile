@@ -1,5 +1,5 @@
 # Convenience wrappers. `make help` lists targets.
-.PHONY: help install verify demo backtest readme sheet doctor synthetic clean
+.PHONY: help install verify demo backtest readme doctor synthetic lint coverage e2e clean
 help:            ## show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  %-12s %s\n", $$1, $$2}'
 install:         ## npm ci
@@ -16,5 +16,11 @@ doctor:          ## environment + corpus health
 	npm run kya -- doctor
 synthetic:       ## regenerate the synthetic demo corpus
 	npm run synthetic
+lint:            ## run ESLint
+	npm run lint
+coverage:        ## run tests with coverage report
+	npm run test:coverage
+e2e:             ## run Playwright browser smoke tests
+	npm run test:e2e
 clean:           ## remove generated artifacts
-	rm -rf node_modules web/data.js web/sheets dist
+	rm -rf node_modules web/data.js web/sheets dist coverage test-results playwright-report

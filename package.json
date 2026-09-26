@@ -23,23 +23,25 @@
     "doctor": "tsx src/cli.ts doctor",
     "new-subject": "tsx src/cli.ts new-subject",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@playwright/test": "^1.63.0",
     "@types/node": "^20.14.0",
     "@vitest/coverage-v8": "^2.1.0",
+    "eslint": "^9.10.0",
     "fast-check": "^4.10.2",
     "prettier": "^3.3.3",
     "tsx": "^4.19.0",
     "typescript": "^5.5.4",
+    "typescript-eslint": "^8.4.0",
     "vitest": "^2.1.0",
-    "zod-to-json-schema": "^3.25.2",
-    "@eslint/js": "^9.10.0",
-    "eslint": "^9.10.0",
-    "typescript-eslint": "^8.4.0"
+    "zod-to-json-schema": "^3.25.2"
   },
   "keywords": [
     "exam",
