@@ -3,8 +3,8 @@ message: "If you use this software or its derived data, please cite it."
 title: "KyaAayega: an open scoreboard for exam priority lists"
 type: software
 authors:
-  - name: "YOUR NAME"
+  - name: "Garvit Agrawal"
 license: MIT
 version: 0.4.0
 date-released: 2026-09-26
-repository-code: "https://github.com/YOUR-USERNAME/kyaaayega"
+repository-code: "https://github.com/GarvitAgrawal04/KyaAayega"

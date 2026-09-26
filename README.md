@@ -1,13 +1,13 @@
 # KyaAayega
 
-[![verify](https://github.com/YOUR-USERNAME/kyaaayega/actions/workflows/verify.yml/badge.svg)](https://github.com/YOUR-USERNAME/kyaaayega/actions/workflows/verify.yml)
+[![verify](https://github.com/GarvitAgrawal04/KyaAayega/actions/workflows/verify.yml/badge.svg)](https://github.com/GarvitAgrawal04/KyaAayega/actions/workflows/verify.yml)
 ![license](https://img.shields.io/badge/code-MIT-blue) ![data](https://img.shields.io/badge/derived%20data-CC%20BY%204.0-lightgrey)
 
 **An open scoreboard for exam priority lists.** From a university's *officially published* past papers it builds a one-page revision priority Sheet, freezes it before the exam, and scores it afterwards with an open script — against the shortcuts students already use. Every number is reproducible from a fresh clone.
 
 > It is a priority order, never a promise of questions.
 
-**Live demo:** `https://YOUR-USERNAME.github.io/kyaaayega/` · **Case study:** [docs/CASE-STUDY.md](docs/CASE-STUDY.md) · **Architecture:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+**Live demo:** `https://GarvitAgrawal04.github.io/KyaAayega/` · **Case study:** [docs/CASE-STUDY.md](docs/CASE-STUDY.md) · **Architecture:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 
 ## What is real today (read this first)
 
