@@ -1,0 +1,160 @@
+{
+  "$ref": "#/definitions/paper",
+  "definitions": {
+    "paper": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "university": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "sitting": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}$"
+        },
+        "course_code": {
+          "type": "string"
+        },
+        "set": {
+          "type": "string"
+        },
+        "max_marks": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "source_url": {
+          "type": "string"
+        },
+        "synthetic": {
+          "type": "boolean",
+          "default": false
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "attempt": {
+                "type": "integer",
+                "exclusiveMinimum": 0
+              },
+              "of": {
+                "type": "integer",
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "id",
+              "attempt",
+              "of"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "section": {
+                "type": "string"
+              },
+              "number": {
+                "type": "string"
+              },
+              "marks": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "or_group": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "default": null
+              },
+              "descriptor": {
+                "type": "string"
+              },
+              "topic_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "topic_ids_machine": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "question_type": {
+                "type": "string",
+                "enum": [
+                  "short",
+                  "theory",
+                  "numerical",
+                  "derivation",
+                  "diagram",
+                  "programming",
+                  "mcq",
+                  "case"
+                ]
+              },
+              "bloom": {
+                "type": "string",
+                "enum": [
+                  "remember",
+                  "understand",
+                  "apply",
+                  "analyze",
+                  "evaluate",
+                  "create"
+                ]
+              },
+              "page": {
+                "type": "integer",
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "id",
+              "section",
+              "number",
+              "marks",
+              "descriptor",
+              "topic_ids"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "university",
+        "subject",
+        "sitting",
+        "course_code",
+        "max_marks",
+        "source_url",
+        "sections",
+        "questions"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

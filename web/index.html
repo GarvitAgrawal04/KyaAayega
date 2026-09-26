@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KyaAayega - Time Machine</title>
+<style>
+  :root { --ink:#1a1a17; --sub:#4a4a44; --paper:#f5f1e8; --rule:#cfc8b8; --accent:#1f4e8c; --warn:#8f3710; --ok:#1f6f54; }
+  * { box-sizing: border-box; } body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.45 system-ui, "Segoe UI", Helvetica, sans-serif; }
+  main { max-width:1100px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font:700 28px Georgia, serif; margin:0; color:var(--accent); } h2 { font:600 20px Georgia, serif; margin:32px 0 8px; }
+  .tag { color:var(--sub); margin:2px 0 16px; } .banner { border:2px solid var(--warn); color:var(--warn); padding:10px 14px; border-radius:8px; font-weight:600; margin:12px 0; }
+  .controls { display:flex; gap:12px; flex-wrap:wrap; align-items:end; margin:16px 0; } label { display:flex; flex-direction:column; font-size:13px; color:var(--sub); gap:4px; }
+  select, button { font:inherit; padding:10px 14px; border-radius:8px; border:1px solid var(--ink); background:#fff; color:var(--ink); min-height:44px; }
+  button.primary { background:var(--ink); color:var(--paper); font-weight:600; cursor:pointer; }
+  .cols { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap:24px; } @media (max-width:820px) { .cols { grid-template-columns: minmax(0,1fr); } }
+  .card { background:#fffdf8; border:1px solid var(--rule); border-radius:12px; padding:16px; overflow-x:auto; }
+  .line { background:var(--ink); color:var(--paper); padding:8px 12px; border-radius:8px; font-weight:600; margin:8px 0; }
+  table { border-collapse:collapse; width:100%; font-size:14px; } th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--rule); vertical-align:top; } th { font-size:12px; letter-spacing:.05em; color:var(--sub); }
+  .dots { letter-spacing:2px; white-space:nowrap; font-family:ui-monospace, monospace; } .num { font-family:ui-monospace, monospace; white-space:nowrap; }
+  .hit { color:var(--ok); font-weight:700; } .miss { color:var(--sub); } .wm { float:right; font-size:12px; font-weight:700; color:var(--warn); border:1px solid var(--warn); padding:2px 6px; border-radius:6px; }
+  .bar { display:grid; grid-template-columns: 170px minmax(0,1fr) 60px; gap:8px; align-items:center; margin:6px 0; } .track { background:#e6e0d2; border-radius:6px; height:16px; } .fill { background:var(--accent); height:16px; border-radius:6px; } .fill.ours { background:var(--ok); }
+  .hidden { display:none; } code { background:#ebe5d6; padding:1px 5px; border-radius:4px; font-size:13px; word-break:break-all; }
+</style>
+</head>
+<body>
+<main>
+  <h1>KyaAayega</h1>
+  <p class="tag">An open scoreboard for exam priority lists: frozen before the exam, scored after it, reproducible by anyone.</p>
+  <div id="banner"></div>
+  <div class="controls">
+    <label>Subject <select id="subject"></select></label>
+    <label>Go back to the exam of <select id="sitting"></select></label>
+    <button class="primary" id="reveal" type="button">Reveal the real paper</button>
+  </div>
+  <div class="cols">
+    <section class="card" aria-labelledby="h-sheet">
+      <span class="wm">REHEARSAL</span>
+      <h2 id="h-sheet" style="margin-top:0">The list as it stood before this exam</h2>
+      <div id="sheetmeta" class="tag"></div>
+      <div class="line">Priority order, not guaranteed questions.</div>
+      <table><thead><tr><th>#</th><th>TOPIC</th><th>PAST PAPERS (oldest first)</th><th>USUALLY</th><th>LATEST</th></tr></thead><tbody id="sheet"></tbody></table>
+      <p class="tag">Ranked by total marks asked in earlier papers. The code cannot see this exam or anything after it; a test enforces that.</p>
+    </section>
+    <section class="card" aria-labelledby="h-paper">
+      <h2 id="h-paper" style="margin-top:0">The paper that was actually set</h2>
+      <p id="sealed" class="tag">Sealed. Press <b>Reveal</b>.</p>
+      <div id="revealed" class="hidden">
+        <p class="tag" id="cutnote"></p>
+        <div id="bars"></div>
+        <table><thead><tr><th>Q</th><th>MARKS</th><th>WHAT IT ASKED</th><th>IN OUR TOP HALF?</th></tr></thead><tbody id="questions"></tbody></table>
+      </div>
+    </section>
+  </div>
+  <h2>Scoreboard - every exam we could replay</h2>
+  <div class="card"><table><thead id="boardhead"></thead><tbody id="board"></tbody></table><p id="verdict" class="tag"></p></div>
+  <h2>History map - every published paper, every syllabus topic</h2>
+  <div class="card"><table><thead id="maphead"></thead><tbody id="map"></tbody></table><p id="never" class="tag"></p></div>
+  <h2>Ledger - lists frozen in advance</h2>
+  <div class="card"><table><thead><tr><th>RUN</th><th>STATUS</th><th>FROZEN AT</th><th>SHA-256</th></tr></thead><tbody id="ledger"></tbody></table></div>
+</main>
+<script src="data.js"></script>
+<script>
+(function () {
+  var D = window.KYA_DATA, $ = function (id) { return document.getElementById(id); };
+  if (!D) { document.querySelector("main").innerHTML = "<p>No data yet. Run <code>npm run build-web</code>.</p>"; return; }
+  var pct = function (x) { return (x * 100).toFixed(1) + "%"; }, H = String(D.headline_cut);
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var LABEL = {};
+  D.subjects.forEach(function (s, i) { $("subject").add(new Option(s.title, i)); });
+  function subject() { return D.subjects[$("subject").value]; }
+  function fillSittings() { $("sitting").innerHTML = ""; subject().sittings.forEach(function (t, i) { $("sitting").add(new Option(t.sitting, i)); }); $("sitting").value = subject().sittings.length - 1; }
+  function render() {
+    var s = subject(), t = s.sittings[$("sitting").value]; LABEL = s.labels; var IDS = Object.keys(s.summary);
+    $("banner").innerHTML = s.synthetic ? '<div class="banner">SYNTHETIC DEMO DATA - generated to prove the pipeline runs. These numbers mean nothing. Replace with officially published papers.</div>' : "";
+    $("sealed").classList.remove("hidden"); $("revealed").classList.add("hidden");
+    if (!t) { $("sheet").innerHTML = ""; return; }
+    $("sheetmeta").textContent = "Built only from: " + t.past_sittings.join(", ") + ". Data depth: " + t.depth_label + ".";
+    $("sheet").innerHTML = t.sheet.map(function (r) {
+      return "<tr><td class='num'>" + r.rank + "</td><td><b>" + esc(r.name) + "</b><br><span class='miss'>" + esc(r.unit) + "</span></td><td><span class='dots' aria-hidden='true'>" + r.history.map(function (h) { return h ? "●" : "○"; }).join("") + "</span> <span class='num'>" + r.times_asked + "/" + r.of_sittings + "</span></td><td class='num'>" + (r.typical_marks == null ? "-" : r.typical_marks + " marks") + "</td><td class='num'>" + (r.last_asked || "-") + "</td></tr>";
+    }).join("");
+    $("cutnote").textContent = "Marks a student could attempt after studying only the top " + (D.headline_cut * 100) + "% of each list (" + Math.ceil(D.headline_cut * t.n_topics) + " of " + t.n_topics + " topics, by count), respecting the paper's choice rules:";
+    $("bars").innerHTML = ["B3"].concat(IDS.filter(function (x) { return x !== "B3"; })).map(function (id) { var v = t.coverage[id][H]; return "<div class='bar'><div>" + LABEL[id] + "</div><div class='track'><div class='fill " + (id === "B3" ? "ours" : "") + "' style='width:" + (v * 100) + "%'></div></div><div class='num'>" + pct(v) + "</div></div>"; }).join("");
+    $("questions").innerHTML = t.paper.questions.map(function (q) { return "<tr><td class='num'>" + esc(q.number) + "</td><td class='num'>" + q.marks + "</td><td>" + esc(q.descriptor) + "<br><span class='miss'>" + esc(q.topics.join(" + ") || "out of syllabus") + "</span></td><td class='" + (q.hit ? "hit" : "miss") + "'>" + (q.hit ? "✓ yes" : "– no") + "</td></tr>"; }).join("");
+    $("boardhead").innerHTML = "<tr><th>EXAM</th><th>PAST PAPERS USED</th>" + IDS.map(function (id) { return "<th>" + esc(LABEL[id].toUpperCase()) + "</th>"; }).join("") + "</tr>";
+    $("board").innerHTML = s.sittings.map(function (x) { return "<tr><td class='num'>" + x.sitting + "</td><td class='num'>" + x.n_train + "</td>" + IDS.map(function (id) { return "<td class='num'>" + pct(x.coverage[id][H]) + "</td>"; }).join("") + "</tr>"; }).join("") +
+      (s.sittings.length ? "<tr><td><b>mean</b></td><td></td>" + IDS.map(function (id) { return "<td class='num'><b>" + pct(s.summary[id].mean[H]) + "</b></td>"; }).join("") + "</tr>" : "");
+    $("verdict").textContent = "Ours vs " + LABEL[s.headline.adversary] + ": ahead in " + Math.round(s.headline.share_positive * s.sittings.length) + " of " + s.sittings.length + " exams; median difference " + (s.headline.median_diff * 100).toFixed(1) + " points. Verdict: " + s.headline.verdict + ".";
+    var hm = s.history_map;
+    $("maphead").innerHTML = "<tr><th>TOPIC</th><th>UNIT</th>" + hm.sittings.map(function (x) { return "<th class='num'>" + esc(x.slice(2)) + "</th>"; }).join("") + "<th>ASKED</th><th>TOTAL MARKS</th></tr>";
+    $("map").innerHTML = hm.rows.map(function (r) { return "<tr><td>" + esc(r.name) + "</td><td class='miss'>" + esc(r.unit) + "</td>" + r.history.map(function (h) { return "<td class='" + (h ? "hit" : "miss") + "'>" + (h ? "●" : "·") + "</td>"; }).join("") + "<td class='num'>" + r.times_asked + "/" + hm.sittings.length + "</td><td class='num'>" + r.total_marks + "</td></tr>"; }).join("");
+    var never = hm.rows.filter(function (r) { return r.times_asked === 0; }).map(function (r) { return r.name; });
+    $("never").textContent = never.length ? "Never asked in any published paper: " + never.join(", ") + "." : "Every syllabus topic has been asked at least once.";
+    $("ledger").innerHTML = s.runs.length ? s.runs.map(function (r) { return "<tr><td>" + esc(r.run_id) + "</td><td>" + esc(r.status.toUpperCase()) + "</td><td class='num'>" + esc(r.frozen_at) + "</td><td><code>" + esc(r.files[0].sha256) + "</code></td></tr>"; }).join("") : "<tr><td colspan='4' class='miss'>Nothing frozen yet. Run: kya freeze &lt;subject&gt; --as-of YYYY-MM --status live</td></tr>";
+  }
+  $("subject").addEventListener("change", function () { fillSittings(); render(); });
+  $("sitting").addEventListener("change", render);
+  $("reveal").addEventListener("click", function () { $("sealed").classList.add("hidden"); $("revealed").classList.remove("hidden"); });
+  fillSittings(); render();
+})();
+</script>
+</body>
+</html>

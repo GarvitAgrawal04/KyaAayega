@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software or its derived data, please cite it."
+title: "KyaAayega: an open scoreboard for exam priority lists"
+type: software
+authors:
+  - name: "YOUR NAME"
+license: MIT
+version: 0.3.0
+date-released: 2026-09-21
+repository-code: "https://github.com/YOUR-USERNAME/kyaaayega"

@@ -1,0 +1,6 @@
+{
+  "name": "kyaaayega",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "postCreateCommand": "npm ci",
+  "customizations": { "vscode": { "extensions": ["esbenp.prettier-vscode", "vitest.explorer"] } }
+}

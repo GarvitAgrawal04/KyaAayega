@@ -1,0 +1,24 @@
+{
+  "v": 1,
+  "runs": [
+    {
+      "run_id": "demo-univ/demo-os/2025-12-rehearsal",
+      "status": "rehearsal",
+      "as_of": "2025-12",
+      "frozen_at": "2026-09-20T17:31:05.190Z",
+      "files": [
+        {
+          "path": "demo-univ/demo-os/runs/2025-12-rehearsal/prediction.json",
+          "sha256": "ddb8b81c55649affeb94952f3242df3f9f1535f6c422fc27f54c8d0ff0001a9e"
+        },
+        {
+          "path": "demo-univ/demo-os/runs/2025-12-rehearsal/sheet.html",
+          "sha256": "86ea06d27e09a8f0e88313dbfc6a0276dbf5e673d8690b063d69735921853d0d"
+        }
+      ],
+      "git_tag": null,
+      "ots": [],
+      "wayback": []
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "university": "demo-univ",
+  "subject": "demo-os",
+  "title": "Operating Systems (SYNTHETIC demo)",
+  "fixed_on": "2026-09-20",
+  "units": [
+    {
+      "id": "u1",
+      "name": "Introduction",
+      "topics": [
+        {
+          "id": "t-types-of-operating-systems",
+          "name": "Types of operating systems",
+          "aliases": []
+        },
+        {
+          "id": "t-system-calls",
+          "name": "System calls",
+          "aliases": []
+        },
+        {
+          "id": "t-os-structure",
+          "name": "OS structure",
+          "aliases": []
+        },
+        {
+          "id": "t-booting",
+          "name": "Booting",
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "name": "Processes",
+      "topics": [
+        {
+          "id": "t-cpu-scheduling-algorithms",
+          "name": "CPU scheduling algorithms",
+          "aliases": []
+        },
+        {
+          "id": "t-process-states-and-pcb",
+          "name": "Process states and PCB",
+          "aliases": []
+        },
+        {
+          "id": "t-threads",
+          "name": "Threads",
+          "aliases": []
+        },
+        {
+          "id": "t-context-switching",
+          "name": "Context switching",
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "name": "Synchronisation",
+      "topics": [
+        {
+          "id": "t-bankers-algorithm",
+          "name": "Bankers algorithm",
+          "aliases": []
+        },
+        {
+          "id": "t-semaphores",
+          "name": "Semaphores",
+          "aliases": []
+        },
+        {
+          "id": "t-critical-section",
+          "name": "Critical section",
+          "aliases": []
+        },
+        {
+          "id": "t-deadlock-detection",
+          "name": "Deadlock detection",
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "name": "Memory",
+      "topics": [
+        {
+          "id": "t-page-replacement",
+          "name": "Page replacement",
+          "aliases": []
+        },
+        {
+          "id": "t-paging-and-segmentation",
+          "name": "Paging and segmentation",
+          "aliases": []
+        },
+        {
+          "id": "t-thrashing",
+          "name": "Thrashing",
+          "aliases": []
+        },
+        {
+          "id": "t-virtual-memory",
+          "name": "Virtual memory",
+          "aliases": []
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "name": "Storage",
+      "topics": [
+        {
+          "id": "t-disk-scheduling",
+          "name": "Disk scheduling",
+          "aliases": []
+        },
+        {
+          "id": "t-file-allocation",
+          "name": "File allocation",
+          "aliases": []
+        },
+        {
+          "id": "t-directory-structure",
+          "name": "Directory structure",
+          "aliases": []
+        },
+        {
+          "id": "t-raid-levels",
+          "name": "RAID levels",
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}

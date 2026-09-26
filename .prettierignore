@@ -1,0 +1,9 @@
+node_modules/
+dist/
+local/
+ledger/
+schema/
+web/data.js
+web/sheets/
+package-lock.json
+*.md

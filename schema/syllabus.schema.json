@@ -1,0 +1,83 @@
+{
+  "$ref": "#/definitions/syllabus",
+  "definitions": {
+    "syllabus": {
+      "type": "object",
+      "properties": {
+        "university": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "fixed_on": {
+          "type": "string"
+        },
+        "units": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "topics": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "aliases": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "default": []
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "topics"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "university",
+        "subject",
+        "title",
+        "fixed_on",
+        "units"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

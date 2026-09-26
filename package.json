@@ -1,0 +1,50 @@
+{
+  "name": "kyaaayega",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Open scoreboard for exam priority lists: frozen before the exam, scored after it, reproducible by anyone.",
+  "license": "MIT",
+  "scripts": {
+    "kya": "tsx src/cli.ts",
+    "test": "vitest run",
+    "synthetic": "node scripts/make-synthetic.mjs",
+    "backtest": "tsx src/cli.ts backtest demo-univ/demo-os --write",
+    "build-web": "tsx src/cli.ts build-web",
+    "verify": "tsc --noEmit && tsx src/cli.ts verify && tsx src/cli.ts readme --check && vitest run",
+    "demo": "tsx src/cli.ts build-web && tsx src/cli.ts sheet demo-univ/demo-os --as-of 2025-12 && echo Open web/index.html in a browser - it works offline.",
+    "typecheck": "tsc --noEmit",
+    "schemas": "tsx scripts/export-schemas.ts",
+    "readme": "tsx src/cli.ts readme",
+    "sheet": "tsx src/cli.ts sheet demo-univ/demo-os --as-of 2025-12",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "doctor": "tsx src/cli.ts doctor",
+    "new-subject": "tsx src/cli.ts new-subject"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.0",
+    "zod-to-json-schema": "^3.25.2",
+    "prettier": "^3.3.3"
+  },
+  "keywords": [
+    "exam",
+    "past-papers",
+    "pyq",
+    "backtesting",
+    "walk-forward",
+    "reproducibility",
+    "opentimestamps",
+    "open-data",
+    "education"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}

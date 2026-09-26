@@ -1,0 +1,4 @@
+- [ ] `npm run verify` is green
+- [ ] No PDFs, question text or papers of unknown origin; `PROVENANCE.md` updated for new papers
+- [ ] No frozen run was edited
+- [ ] `CHANGELOG.md` updated; README scoreboard regenerated if numbers changed
