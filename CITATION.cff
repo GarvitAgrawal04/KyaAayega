@@ -5,6 +5,6 @@ type: software
 authors:
   - name: "YOUR NAME"
 license: MIT
-version: 0.3.0
-date-released: 2026-09-21
+version: 0.4.0
+date-released: 2026-09-26
 repository-code: "https://github.com/YOUR-USERNAME/kyaaayega"

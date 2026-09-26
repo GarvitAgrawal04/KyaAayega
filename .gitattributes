@@ -1,0 +1,8 @@
+# Enforce LF line endings for all text files (matches .editorconfig end_of_line = lf)
+* text=auto eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.pdf binary
+*.ots binary

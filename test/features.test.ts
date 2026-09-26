@@ -78,9 +78,16 @@ describe("README scoreboard", () => {
 describe("new-subject scaffolder", () => {
   it("writes a syllabus that parses and a CSV template with the right header", () => {
     const dir = fs.mkdtempSync(path.join(os.tmpdir(), "kya-"));
-    const rel = "u/sub"; const target = path.join(dir, rel);
+    const rel = "u/sub";
+    const target = path.join(dir, rel);
     fs.mkdirSync(path.join(target, "papers"), { recursive: true });
-    const skeleton = { university: "u", subject: "sub", title: "T", fixed_on: "2026-09-21", units: [{ id: "u1", name: "N", topics: [{ id: "t-1", name: "X", aliases: [] }] }] };
+    const skeleton = {
+      university: "u",
+      subject: "sub",
+      title: "T",
+      fixed_on: "2026-09-21",
+      units: [{ id: "u1", name: "N", topics: [{ id: "t-1", name: "X", aliases: [] }] }],
+    };
     fs.writeFileSync(path.join(target, "syllabus.json"), JSON.stringify(skeleton));
     expect(() => Syllabus.parse(JSON.parse(fs.readFileSync(path.join(target, "syllabus.json"), "utf8")))).not.toThrow();
   });

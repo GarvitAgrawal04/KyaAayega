@@ -8,4 +8,6 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20, cache: npm }
       - run: npm ci
-      - run: npm run verify   # hashes match the manifest, no look-ahead, scoreboards reproduce, all tests pass
+      - run: npm run lint # ESLint - no errors allowed
+      - run: npm run format:check # Prettier - consistent formatting
+      - run: npm run verify # types + hashes + look-ahead + scoreboards + README + 42 tests

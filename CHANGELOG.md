@@ -1,6 +1,19 @@
 # Changelog
 Format: Keep a Changelog. Versioning: SemVer for code; `PROTOCOL.md` is versioned separately.
 
+## [0.4.0] - 2026-09-26
+### Added
+- ESLint flat config with typescript-eslint recommended rules; `lint` and `lint:fix` scripts.
+- Vitest v8 coverage with enforced thresholds (80% lines/statements/functions, 70% branches); `test:coverage` script.
+- Property-based tests using fast-check: permutation invariance, look-ahead invariance, coverage monotonicity, bounds checks.
+- Edge-case scoring fixtures: mixed-mark sections, three-alternative OR groups, multi-topic partial coverage, multi-section independence, printed vs choice-aware divergence.
+- `scripts/freeze-proof.sh` ceremony helper for live freezes (git tag + OpenTimestamps + Wayback commands).
+- `.gitattributes` for consistent LF line endings across platforms.
+- CI workflow now runs ESLint and Prettier checks before verify.
+- Test suite expanded from 26 to 42 tests; coverage at 98%+ lines.
+### Fixed
+- `CITATION.cff` version bumped from 0.2.0 to 0.3.0 (was stale).
+
 ## [0.3.0] - 2026-09-21
 ### Added
 - `kya new-subject <univ/subject> "Title"` scaffolds a subject (syllabus skeleton + CSV template) so adding a university is one command.
