@@ -87,4 +87,101 @@ test.describe("Time Machine smoke tests", () => {
     const hasScoring = /B3|coverage|score|backtest|verdict/i.test(content || "");
     expect(hasScoring).toBe(true);
   });
+
+  test("navigation switches across all 5 luxury tabs smoothly", async ({ page }) => {
+    const tabs = page.locator(".tab-btn");
+    expect(await tabs.count()).toBe(5);
+
+    // Click Planner Tab
+    await page.getByRole("tab", { name: /planner/i }).click();
+    await expect(page.locator("#tab-planner")).toHaveClass(/active/);
+    await expect(page.locator("#tab-time-machine")).not.toHaveClass(/active/);
+
+    // Click Cram Mode Tab
+    await page.getByRole("tab", { name: /cram/i }).click();
+    await expect(page.locator("#tab-cram")).toHaveClass(/active/);
+
+    // Click Question Bank Tab
+    await page.getByRole("tab", { name: /question bank/i }).click();
+    await expect(page.locator("#tab-bank")).toHaveClass(/active/);
+
+    // Click Ledger Tab
+    await page.getByRole("tab", { name: /ledger/i }).click();
+    await expect(page.locator("#tab-ledger")).toHaveClass(/active/);
+
+    // Return to Time Machine
+    await page.getByRole("tab", { name: /time machine/i }).click();
+    await expect(page.locator("#tab-time-machine")).toHaveClass(/active/);
+  });
+
+  test("study planner dynamically recalculates choice-aware coverage", async ({ page }) => {
+    // Navigate to Planner
+    await page.getByRole("tab", { name: /planner/i }).click();
+
+    // Initially 0 topics
+    const countEl = page.locator("#proj-topics-count");
+    await expect(countEl).toContainText("0 /");
+
+    // Click 'Select All Core'
+    await page.locator("#btn-select-core").click();
+    await expect(countEl).not.toContainText("0 /");
+
+    const covEl = page.locator("#proj-coverage-pct");
+    const covText = await covEl.textContent();
+    expect(parseFloat(covText || "0")).toBeGreaterThan(0);
+
+    // Click 'Reset All'
+    await page.locator("#btn-reset-checklist").click();
+    await expect(countEl).toContainText("0 /");
+    await expect(covEl).toContainText("0.0%");
+
+    // Click first individual topic checklist item
+    const firstItem = page.locator(".topic-checklist-item").first();
+    await firstItem.click();
+    await expect(firstItem).toHaveClass(/checked/);
+    await expect(countEl).toContainText("1 /");
+  });
+
+  test("cram mode displays top 10 topics and never-asked filter", async ({ page }) => {
+    await page.getByRole("tab", { name: /cram/i }).click();
+
+    const cramRows = page.locator("#cram-topics-tbody tr");
+    expect(await cramRows.count()).toBeGreaterThan(0);
+    expect(await cramRows.count()).toBeLessThanOrEqual(10);
+
+    const neverAsked = page.locator("#never-asked-tags");
+    await expect(neverAsked).toBeVisible();
+  });
+
+  test("question bank live search filters questions", async ({ page }) => {
+    await page.getByRole("tab", { name: /question bank/i }).click();
+
+    const initialCards = await page.locator(".question-card").count();
+    expect(initialCards).toBeGreaterThan(0);
+
+    // Search for a specific keyword
+    const searchInput = page.locator("#bank-search");
+    await searchInput.fill("scheduling");
+    await page.waitForTimeout(200);
+
+    const filteredCards = await page.locator(".question-card").count();
+    expect(filteredCards).toBeLessThanOrEqual(initialCards);
+
+    // Clear search
+    await searchInput.fill("");
+    await page.waitForTimeout(200);
+    const resetCards = await page.locator(".question-card").count();
+    expect(resetCards).toBe(initialCards);
+  });
+
+  test("proof ledger displays manifest rows and verification command", async ({ page }) => {
+    await page.getByRole("tab", { name: /ledger/i }).click();
+
+    const ledgerRows = page.locator("#ledger-tbody tr");
+    expect(await ledgerRows.count()).toBeGreaterThan(0);
+
+    // Check verify command code snippet
+    const codeSnippet = page.locator("#tab-ledger pre code");
+    await expect(codeSnippet).toContainText("npm run verify");
+  });
 });

@@ -213,6 +213,45 @@ try {
           })),
         };
         const labels = Object.fromEntries([["B0", "Random half"], ...Object.entries(ENTRANTS).map(([id, e]) => [id, e.label])]);
+        const nSittings = s.papers.length;
+        const topic_stats = topicIds(s.syllabus).map((id) => {
+          const st = all.get(id)!;
+          const freq = nSittings > 0 ? st.times_asked / nSittings : 0;
+          let tier = "unasked";
+          if (freq >= 0.6) tier = "core";
+          else if (freq >= 0.3) tier = "high_yield";
+          else if (st.times_asked > 0) tier = "recommended";
+          return {
+            id,
+            name: names.get(id) ?? id,
+            unit: unitOf.get(id) ?? "General",
+            total_marks: Math.round(st.total_marks),
+            times_asked: st.times_asked,
+            of_sittings: nSittings,
+            frequency_pct: Math.round(freq * 100),
+            typical_marks: st.typical_marks,
+            last_asked: st.last_asked,
+            tier,
+          };
+        });
+        const all_questions = s.papers.flatMap((p) =>
+          p.questions.map((q) => ({
+            id: q.id,
+            sitting: p.sitting,
+            course_code: p.course_code,
+            set: p.set ?? "SET-01",
+            section: q.section,
+            number: q.number,
+            marks: q.marks,
+            or_group: q.or_group ?? null,
+            descriptor: q.descriptor,
+            topic_ids: q.topic_ids,
+            topic_names: q.topic_ids.map((tid) => names.get(tid) ?? tid),
+            question_type: q.question_type ?? "theoretical",
+            bloom: q.bloom ?? "understand",
+            page: q.page ?? 1,
+          })),
+        );
         return {
           rel,
           labels,
@@ -224,6 +263,9 @@ try {
           summary: sb.summary,
           headline: sb.headline,
           runs: readManifest(ROOT).runs.filter((x) => x.run_id.startsWith(rel + "/")),
+          syllabus: s.syllabus,
+          topic_stats,
+          all_questions,
         };
       });
       fs.writeFileSync(
