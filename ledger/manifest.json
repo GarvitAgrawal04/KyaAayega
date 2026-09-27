@@ -19,6 +19,25 @@
       "git_tag": null,
       "ots": [],
       "wayback": []
+    },
+    {
+      "run_id": "upes/cse-os/2025-12-rehearsal",
+      "status": "rehearsal",
+      "as_of": "2025-12",
+      "frozen_at": "2026-09-27T13:42:00.519Z",
+      "files": [
+        {
+          "path": "upes/cse-os/runs/2025-12-rehearsal/prediction.json",
+          "sha256": "154939e821125330a1c010a2f8261009431e9d44824353fcf5611d4ba5f72a2c"
+        },
+        {
+          "path": "upes/cse-os/runs/2025-12-rehearsal/sheet.html",
+          "sha256": "d3578bea30736d5f3846b88e270fc287420f1757339b78c5b0e4f1960e97ffa0"
+        }
+      ],
+      "git_tag": null,
+      "ots": [],
+      "wayback": []
     }
   ]
 }

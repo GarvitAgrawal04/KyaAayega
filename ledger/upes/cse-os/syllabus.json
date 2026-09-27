@@ -1,0 +1,178 @@
+{
+  "university": "upes",
+  "subject": "cse-os",
+  "title": "Operating Systems - B.Tech CSE, UPES",
+  "fixed_on": "2026-09-20",
+  "units": [
+    {
+      "id": "u1",
+      "name": "Introduction to Operating Systems",
+      "topics": [
+        {
+          "id": "t-os-types-structures",
+          "name": "OS types and system structures",
+          "aliases": ["batch", "multiprogramming", "time-sharing", "microkernel", "monolithic"]
+        },
+        {
+          "id": "t-system-calls",
+          "name": "System calls and API",
+          "aliases": ["system call interface", "POSIX API", "trap"]
+        },
+        {
+          "id": "t-dual-mode-operations",
+          "name": "Dual-mode and kernel operations",
+          "aliases": ["user mode", "kernel mode", "privileged instructions"]
+        },
+        {
+          "id": "t-system-boot",
+          "name": "System boot and initialization",
+          "aliases": ["bootstrap loader", "BIOS", "UEFI", "init"]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "name": "Process Management & CPU Scheduling",
+      "topics": [
+        {
+          "id": "t-process-states-pcb",
+          "name": "Process states and PCB",
+          "aliases": ["process control block", "state transition diagram"]
+        },
+        {
+          "id": "t-context-switching",
+          "name": "Context switching and process queues",
+          "aliases": ["ready queue", "wait queue", "dispatcher"]
+        },
+        {
+          "id": "t-threads-multithreading",
+          "name": "Threads and multithreading models",
+          "aliases": ["user thread", "kernel thread", "many-to-many", "POSIX pthreads"]
+        },
+        {
+          "id": "t-cpu-scheduling",
+          "name": "CPU scheduling algorithms",
+          "aliases": ["FCFS", "SJF", "SRTF", "Round Robin", "Priority scheduling", "Multilevel queue"]
+        },
+        {
+          "id": "t-interprocess-comm",
+          "name": "Inter-process communication",
+          "aliases": ["shared memory", "message passing", "pipes", "message queue"]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "name": "Process Synchronization & Deadlocks",
+      "topics": [
+        {
+          "id": "t-critical-section",
+          "name": "Critical section and Peterson solution",
+          "aliases": ["mutual exclusion", "progress", "bounded waiting"]
+        },
+        {
+          "id": "t-semaphores-mutex",
+          "name": "Semaphores and mutex locks",
+          "aliases": ["counting semaphore", "binary semaphore", "wait and signal"]
+        },
+        {
+          "id": "t-classical-ipc",
+          "name": "Classical synchronization problems",
+          "aliases": ["Producer-Consumer", "Dining Philosophers", "Readers-Writers"]
+        },
+        {
+          "id": "t-deadlock-conditions-rag",
+          "name": "Deadlock conditions and RAG",
+          "aliases": ["Coffman conditions", "Resource Allocation Graph", "cycle detection"]
+        },
+        {
+          "id": "t-bankers-algorithm",
+          "name": "Bankers algorithm and avoidance",
+          "aliases": ["safe state", "resource request algorithm", "safety algorithm"]
+        },
+        {
+          "id": "t-deadlock-detection-recovery",
+          "name": "Deadlock detection and recovery",
+          "aliases": ["wait-for graph", "process termination", "resource preemption"]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "name": "Memory Management",
+      "topics": [
+        {
+          "id": "t-logical-physical-address",
+          "name": "Logical and physical address translation",
+          "aliases": ["MMU", "base and limit registers", "address binding"]
+        },
+        {
+          "id": "t-contiguous-allocation",
+          "name": "Contiguous allocation and fragmentation",
+          "aliases": ["first-fit", "best-fit", "worst-fit", "external fragmentation", "internal fragmentation"]
+        },
+        {
+          "id": "t-paging-and-tlb",
+          "name": "Paging and TLB",
+          "aliases": ["page table", "Translation Lookaside Buffer", "effective access time", "multi-level paging"]
+        },
+        {
+          "id": "t-segmentation",
+          "name": "Segmentation concepts",
+          "aliases": ["segment table", "segmentation fault"]
+        },
+        {
+          "id": "t-virtual-memory-demand-paging",
+          "name": "Virtual memory and demand paging",
+          "aliases": ["page fault", "swap space", "lazy swapper"]
+        },
+        {
+          "id": "t-page-replacement",
+          "name": "Page replacement algorithms",
+          "aliases": ["FIFO", "LRU", "Optimal", "Belady anomaly", "Clock algorithm"]
+        },
+        {
+          "id": "t-thrashing-working-set",
+          "name": "Thrashing and working set model",
+          "aliases": ["page fault frequency", "working set window", "degree of multiprogramming"]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "name": "Storage Management & File Systems",
+      "topics": [
+        {
+          "id": "t-file-attributes-operations",
+          "name": "File attributes and operations",
+          "aliases": ["file control block", "open file table", "file pointer"]
+        },
+        {
+          "id": "t-directory-structures",
+          "name": "Directory structures and protection",
+          "aliases": ["single-level", "two-level", "hierarchical tree", "access matrix", "ACL"]
+        },
+        {
+          "id": "t-file-allocation",
+          "name": "File allocation methods",
+          "aliases": ["contiguous allocation", "linked allocation", "indexed allocation", "inode"]
+        },
+        {
+          "id": "t-free-space-management",
+          "name": "Free space management",
+          "aliases": ["bit vector", "free list", "grouping", "counting"]
+        },
+        {
+          "id": "t-disk-scheduling",
+          "name": "Disk scheduling algorithms",
+          "aliases": ["FCFS", "SSTF", "SCAN", "C-SCAN", "LOOK", "C-LOOK"]
+        },
+        {
+          "id": "t-raid-architecture",
+          "name": "RAID architecture and levels",
+          "aliases": ["striping", "mirroring", "parity", "RAID 0", "RAID 1", "RAID 5"]
+        }
+      ]
+    }
+  ]
+}

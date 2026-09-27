@@ -1,0 +1,99 @@
+sitting,course_code,set,section,attempt,of,number,marks,or_group,descriptor,topic_ids,question_type,page,source_url
+2018-12,CSEG2007,SET-01,A,5,5,1a,4,,Operating system definition and kernel functions,t-os-types-structures,short,1,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,A,5,5,1b,4,,Process states transition diagram and dispatching,t-process-states-pcb,short,1,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,A,5,5,1c,4,,Thread control block versus process control block,t-threads-multithreading,short,1,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,A,5,5,1d,4,,Logical versus physical address space concepts,t-logical-physical-address,short,1,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,A,5,5,1e,4,,Sequential and direct access file methods,t-file-attributes-operations,short,1,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,B,4,5,2,10,,Non-preemptive SJF and Priority scheduling calculation,t-cpu-scheduling,numerical,2,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,B,4,5,3,10,,Semaphores implementation of mutual exclusion primitive,t-semaphores-mutex,theory,2,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,B,4,5,4,10,,Banker algorithm safety algorithm matrix calculation,t-bankers-algorithm,numerical,2,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,B,4,5,5,10,,Paging architecture page table and offset calculation,t-paging-and-tlb,numerical,3,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,B,4,5,6,10,,FIFO and Optimal page replacement numerical,t-page-replacement,numerical,3,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,C,2,2,7a,20,C-Q7,Deadlock prevention strategies for four Coffman conditions,t-deadlock-conditions-rag,theory,4,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,C,2,2,7b,20,C-Q7,Producer consumer bounded buffer problem with semaphores,t-classical-ipc;t-semaphores-mutex,theory,4,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,C,2,2,8a,20,C-Q8,Disk scheduling FCFS SSTF and SCAN comparison,t-disk-scheduling,numerical,5,https://library.ddn.upes.ac.in/
+2018-12,CSEG2007,SET-01,C,2,2,8b,20,C-Q8,Contiguous and indexed file allocation schemes,t-file-allocation,theory,5,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,A,5,5,1a,4,,System calls invocation and trap mechanism,t-system-calls,short,1,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,A,5,5,1b,4,,CPU burst and I-O burst cycle,t-cpu-scheduling,short,1,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,A,5,5,1c,4,,Race condition definition and critical section,t-critical-section,short,1,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,A,5,5,1d,4,,Internal fragmentation in paging systems,t-contiguous-allocation;t-paging-and-tlb,short,1,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,A,5,5,1e,4,,Disk structure cylinders heads and sectors,t-disk-scheduling,short,1,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,B,4,5,2,10,,Round Robin scheduling with variable time quantum,t-cpu-scheduling,numerical,2,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,B,4,5,3,10,,Dining philosophers solution using monitor or semaphores,t-classical-ipc;t-semaphores-mutex,theory,2,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,B,4,5,4,10,,Deadlock avoidance with Banker algorithm safety check,t-bankers-algorithm,numerical,2,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,B,4,5,5,10,,Translation Lookaside Buffer effective access time calculation,t-paging-and-tlb,numerical,3,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,B,4,5,6,10,,LRU page replacement and Belady anomaly check,t-page-replacement,numerical,3,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,C,2,2,7a,20,C-Q7,Process synchronization using Peterson solution proof,t-critical-section,theory,4,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,C,2,2,7b,20,C-Q7,Resource Allocation Graph cycle detection and reduction,t-deadlock-conditions-rag;t-deadlock-detection-recovery,theory,4,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,C,2,2,8a,20,C-Q8,Disk scheduling LOOK and C-SCAN algorithms numerical,t-disk-scheduling,numerical,5,https://library.ddn.upes.ac.in/
+2019-12,CSEG2007,SET-01,C,2,2,8b,20,C-Q8,RAID architecture levels zero one and five,t-raid-architecture,theory,5,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,A,5,5,1a,4,,Operating system services and system calls,t-system-calls,short,1,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,A,5,5,1b,4,,Process states and PCB structure,t-process-states-pcb,short,1,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,A,5,5,1c,4,,Differences between user and kernel threads,t-threads-multithreading,short,1,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,A,5,5,1d,4,,Internal versus external memory fragmentation,t-contiguous-allocation,short,1,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,A,5,5,1e,4,,Directory structure single versus two level,t-directory-structures,short,1,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,B,4,5,2,10,,Round Robin and Priority scheduling numerical,t-cpu-scheduling,numerical,2,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,B,4,5,3,10,,Peterson algorithm for mutual exclusion,t-critical-section,theory,2,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,B,4,5,4,10,,Banker safety algorithm resource allocation numerical,t-bankers-algorithm,numerical,2,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,B,4,5,5,10,,Paging address translation and TLB operation,t-paging-and-tlb,theory,3,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,B,4,5,6,10,,FIFO and LRU page replacement numerical,t-page-replacement,numerical,3,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,C,2,2,7a,20,C-Q7,Four deadlock conditions and recovery methods,t-deadlock-conditions-rag;t-deadlock-detection-recovery,theory,4,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,C,2,2,7b,20,C-Q7,Dining philosophers problem solution using semaphores,t-classical-ipc;t-semaphores-mutex,theory,4,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,C,2,2,8a,20,C-Q8,Disk scheduling algorithms SSTF SCAN comparison,t-disk-scheduling,numerical,5,https://library.ddn.upes.ac.in/
+2020-12,CSEG2007,SET-01,C,2,2,8b,20,C-Q8,File allocation methods contiguous linked indexed,t-file-allocation,theory,5,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,A,5,5,1a,4,,Dual mode operation user and kernel,t-dual-mode-operations,short,1,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,A,5,5,1b,4,,Context switching steps and dispatcher overhead,t-context-switching,short,1,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,A,5,5,1c,4,,Critical section requirements mutual exclusion progress,t-critical-section,short,1,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,A,5,5,1d,4,,Translation Lookaside Buffer hit ratio calculation,t-paging-and-tlb,short,1,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,A,5,5,1e,4,,Acyclic graph directory and aliasing issues,t-directory-structures,short,1,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,B,4,5,2,10,,FCFS and SJF preemptive scheduling numerical,t-cpu-scheduling,numerical,2,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,B,4,5,3,10,,Producer consumer problem using counting semaphores,t-classical-ipc;t-semaphores-mutex,theory,2,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,B,4,5,4,10,,Banker algorithm state safety check numerical,t-bankers-algorithm,numerical,2,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,B,4,5,5,10,,Optimal and LRU page replacement comparison,t-page-replacement,numerical,3,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,B,4,5,6,10,,SCAN and C-LOOK disk scheduling numerical,t-disk-scheduling,numerical,3,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,C,2,2,7a,20,C-Q7,Interprocess communication shared memory message passing,t-interprocess-comm,theory,4,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,C,2,2,7b,20,C-Q7,Multithreading models many-to-one one-to-one many-to-many,t-threads-multithreading,theory,4,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,C,2,2,8a,20,C-Q8,Demand paging architecture and page fault sequence,t-virtual-memory-demand-paging,theory,5,https://library.ddn.upes.ac.in/
+2021-12,CSEG2007,SET-01,C,2,2,8b,20,C-Q8,RAID architecture levels zero one five,t-raid-architecture,theory,5,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,A,5,5,1a,4,,System boot process bootstrap loader stages,t-system-boot,short,1,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,A,5,5,1b,4,,Process Control Block elements and purpose,t-process-states-pcb,short,1,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,A,5,5,1c,4,,Counting versus binary semaphores comparison,t-semaphores-mutex,short,1,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,A,5,5,1d,4,,Thrashing causes and working set model,t-thrashing-working-set,short,1,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,A,5,5,1e,4,,Free space management bit vector technique,t-free-space-management,short,1,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,B,4,5,2,10,,Priority scheduling with aging mechanism numerical,t-cpu-scheduling,numerical,2,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,B,4,5,3,10,,Readers writers problem using semaphores solution,t-classical-ipc;t-semaphores-mutex,theory,2,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,B,4,5,4,10,,Resource Allocation Graph deadlock detection cycle,t-deadlock-conditions-rag;t-deadlock-detection-recovery,theory,2,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,B,4,5,5,10,,Segmentation with paging address translation mechanism,t-segmentation;t-paging-and-tlb,theory,3,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,B,4,5,6,10,,Indexed file allocation and inode architecture,t-file-allocation,theory,3,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,C,2,2,7a,20,C-Q7,Banker algorithm multiple resource request evaluation,t-bankers-algorithm,numerical,4,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,C,2,2,7b,20,C-Q7,Peterson algorithm correctness proof mutual exclusion,t-critical-section,theory,4,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,C,2,2,8a,20,C-Q8,Page replacement FIFO LRU Belady anomaly,t-page-replacement,numerical,5,https://library.ddn.upes.ac.in/
+2022-12,CSEG2060,SET-01,C,2,2,8b,20,C-Q8,Disk scheduling SSTF LOOK algorithm comparison,t-disk-scheduling,numerical,5,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,A,5,5,1a,4,,Microkernel versus monolithic kernel OS structures,t-os-types-structures,short,1,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,A,5,5,1b,4,,POSIX API and system call handling,t-system-calls,short,1,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,A,5,5,1c,4,,Process creation using fork and exec,t-process-states-pcb,short,1,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,A,5,5,1d,4,,Paging hardware and page size trade-offs,t-paging-and-tlb,short,1,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,A,5,5,1e,4,,File attributes and operations access control,t-file-attributes-operations,short,1,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,B,4,5,2,10,,Shortest Remaining Time First scheduling calculation,t-cpu-scheduling,numerical,2,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,B,4,5,3,10,,Dining philosophers deadlock-free semaphore solution,t-classical-ipc;t-semaphores-mutex,theory,2,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,B,4,5,4,10,,Banker algorithm avoidance safety check table,t-bankers-algorithm,numerical,2,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,B,4,5,5,10,,Virtual memory demand paging page fault handler,t-virtual-memory-demand-paging,theory,3,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,B,4,5,6,10,,Disk scheduling algorithms FCFS SCAN comparison,t-disk-scheduling,numerical,3,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,C,2,2,7a,20,C-Q7,Four Coffman conditions and prevention strategies,t-deadlock-conditions-rag,theory,4,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,C,2,2,7b,20,C-Q7,Critical section solutions hardware test-and-set instructions,t-critical-section,theory,4,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,C,2,2,8a,20,C-Q8,Page replacement algorithms LRU Optimal numerical,t-page-replacement,numerical,5,https://library.ddn.upes.ac.in/
+2023-12,CSEG2060,SET-01,C,2,2,8b,20,C-Q8,RAID levels zero one five performance,t-raid-architecture,theory,5,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,A,5,5,1a,4,,Operating system layered architecture benefits,t-os-types-structures,short,1,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,A,5,5,1b,4,,Kernel mode transitions and interrupt handling,t-dual-mode-operations,short,1,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,A,5,5,1c,4,,Context switch latency factors and optimization,t-context-switching,short,1,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,A,5,5,1d,4,,First-fit and best-fit memory allocation comparison,t-contiguous-allocation,short,1,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,A,5,5,1e,4,,Disk physical structure cylinders tracks sectors,t-disk-scheduling,short,1,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,B,4,5,2,10,,Multilevel feedback queue scheduling principles,t-cpu-scheduling,numerical,2,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,B,4,5,3,10,,Producer consumer buffer synchronization with semaphores,t-classical-ipc;t-semaphores-mutex,theory,2,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,B,4,5,4,10,,Deadlock detection with wait-for graph algorithm,t-deadlock-conditions-rag;t-deadlock-detection-recovery,theory,2,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,B,4,5,5,10,,Paging effective memory access time calculation,t-paging-and-tlb,numerical,3,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,B,4,5,6,10,,Contiguous and indexed file allocation trade-offs,t-file-allocation,theory,3,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,C,2,2,7a,20,C-Q7,Banker algorithm safety and resource request,t-bankers-algorithm,numerical,4,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,C,2,2,7b,20,C-Q7,Readers writers problem preference solutions semaphores,t-classical-ipc;t-semaphores-mutex,theory,4,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,C,2,2,8a,20,C-Q8,Optimal versus LRU page replacement evaluation,t-page-replacement,numerical,5,https://library.ddn.upes.ac.in/
+2024-12,CSEG2060,SET-01,C,2,2,8b,20,C-Q8,C-SCAN and LOOK disk scheduling performance,t-disk-scheduling,numerical,5,https://library.ddn.upes.ac.in/

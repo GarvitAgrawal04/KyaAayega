@@ -1,0 +1,215 @@
+{
+  "id": "upes/cse-os/2022-12",
+  "university": "upes",
+  "subject": "cse-os",
+  "sitting": "2022-12",
+  "course_code": "CSEG2060",
+  "set": "SET-01",
+  "max_marks": 100,
+  "source_url": "https://library.ddn.upes.ac.in/",
+  "synthetic": false,
+  "sections": [
+    {
+      "id": "A",
+      "attempt": 5,
+      "of": 5
+    },
+    {
+      "id": "B",
+      "attempt": 4,
+      "of": 5
+    },
+    {
+      "id": "C",
+      "attempt": 2,
+      "of": 2
+    }
+  ],
+  "questions": [
+    {
+      "id": "A-1a",
+      "section": "A",
+      "number": "1a",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "System boot process bootstrap loader stages",
+      "topic_ids": [
+        "t-system-boot"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1b",
+      "section": "A",
+      "number": "1b",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Process Control Block elements and purpose",
+      "topic_ids": [
+        "t-process-states-pcb"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1c",
+      "section": "A",
+      "number": "1c",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Counting versus binary semaphores comparison",
+      "topic_ids": [
+        "t-semaphores-mutex"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1d",
+      "section": "A",
+      "number": "1d",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Thrashing causes and working set model",
+      "topic_ids": [
+        "t-thrashing-working-set"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1e",
+      "section": "A",
+      "number": "1e",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Free space management bit vector technique",
+      "topic_ids": [
+        "t-free-space-management"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "B-2",
+      "section": "B",
+      "number": "2",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Priority scheduling with aging mechanism numerical",
+      "topic_ids": [
+        "t-cpu-scheduling"
+      ],
+      "question_type": "numerical",
+      "page": 2
+    },
+    {
+      "id": "B-3",
+      "section": "B",
+      "number": "3",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Readers writers problem using semaphores solution",
+      "topic_ids": [
+        "t-classical-ipc",
+        "t-semaphores-mutex"
+      ],
+      "question_type": "theory",
+      "page": 2
+    },
+    {
+      "id": "B-4",
+      "section": "B",
+      "number": "4",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Resource Allocation Graph deadlock detection cycle",
+      "topic_ids": [
+        "t-deadlock-conditions-rag",
+        "t-deadlock-detection-recovery"
+      ],
+      "question_type": "theory",
+      "page": 2
+    },
+    {
+      "id": "B-5",
+      "section": "B",
+      "number": "5",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Segmentation with paging address translation mechanism",
+      "topic_ids": [
+        "t-segmentation",
+        "t-paging-and-tlb"
+      ],
+      "question_type": "theory",
+      "page": 3
+    },
+    {
+      "id": "B-6",
+      "section": "B",
+      "number": "6",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Indexed file allocation and inode architecture",
+      "topic_ids": [
+        "t-file-allocation"
+      ],
+      "question_type": "theory",
+      "page": 3
+    },
+    {
+      "id": "C-7a",
+      "section": "C",
+      "number": "7a",
+      "marks": 20,
+      "or_group": "C-Q7",
+      "descriptor": "Banker algorithm multiple resource request evaluation",
+      "topic_ids": [
+        "t-bankers-algorithm"
+      ],
+      "question_type": "numerical",
+      "page": 4
+    },
+    {
+      "id": "C-7b",
+      "section": "C",
+      "number": "7b",
+      "marks": 20,
+      "or_group": "C-Q7",
+      "descriptor": "Peterson algorithm correctness proof mutual exclusion",
+      "topic_ids": [
+        "t-critical-section"
+      ],
+      "question_type": "theory",
+      "page": 4
+    },
+    {
+      "id": "C-8a",
+      "section": "C",
+      "number": "8a",
+      "marks": 20,
+      "or_group": "C-Q8",
+      "descriptor": "Page replacement FIFO LRU Belady anomaly",
+      "topic_ids": [
+        "t-page-replacement"
+      ],
+      "question_type": "numerical",
+      "page": 5
+    },
+    {
+      "id": "C-8b",
+      "section": "C",
+      "number": "8b",
+      "marks": 20,
+      "or_group": "C-Q8",
+      "descriptor": "Disk scheduling SSTF LOOK algorithm comparison",
+      "topic_ids": [
+        "t-disk-scheduling"
+      ],
+      "question_type": "numerical",
+      "page": 5
+    }
+  ]
+}

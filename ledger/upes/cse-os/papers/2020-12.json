@@ -1,0 +1,214 @@
+{
+  "id": "upes/cse-os/2020-12",
+  "university": "upes",
+  "subject": "cse-os",
+  "sitting": "2020-12",
+  "course_code": "CSEG2007",
+  "set": "SET-01",
+  "max_marks": 100,
+  "source_url": "https://library.ddn.upes.ac.in/",
+  "synthetic": false,
+  "sections": [
+    {
+      "id": "A",
+      "attempt": 5,
+      "of": 5
+    },
+    {
+      "id": "B",
+      "attempt": 4,
+      "of": 5
+    },
+    {
+      "id": "C",
+      "attempt": 2,
+      "of": 2
+    }
+  ],
+  "questions": [
+    {
+      "id": "A-1a",
+      "section": "A",
+      "number": "1a",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Operating system services and system calls",
+      "topic_ids": [
+        "t-system-calls"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1b",
+      "section": "A",
+      "number": "1b",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Process states and PCB structure",
+      "topic_ids": [
+        "t-process-states-pcb"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1c",
+      "section": "A",
+      "number": "1c",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Differences between user and kernel threads",
+      "topic_ids": [
+        "t-threads-multithreading"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1d",
+      "section": "A",
+      "number": "1d",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Internal versus external memory fragmentation",
+      "topic_ids": [
+        "t-contiguous-allocation"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1e",
+      "section": "A",
+      "number": "1e",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Directory structure single versus two level",
+      "topic_ids": [
+        "t-directory-structures"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "B-2",
+      "section": "B",
+      "number": "2",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Round Robin and Priority scheduling numerical",
+      "topic_ids": [
+        "t-cpu-scheduling"
+      ],
+      "question_type": "numerical",
+      "page": 2
+    },
+    {
+      "id": "B-3",
+      "section": "B",
+      "number": "3",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Peterson algorithm for mutual exclusion",
+      "topic_ids": [
+        "t-critical-section"
+      ],
+      "question_type": "theory",
+      "page": 2
+    },
+    {
+      "id": "B-4",
+      "section": "B",
+      "number": "4",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Banker safety algorithm resource allocation numerical",
+      "topic_ids": [
+        "t-bankers-algorithm"
+      ],
+      "question_type": "numerical",
+      "page": 2
+    },
+    {
+      "id": "B-5",
+      "section": "B",
+      "number": "5",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Paging address translation and TLB operation",
+      "topic_ids": [
+        "t-paging-and-tlb"
+      ],
+      "question_type": "theory",
+      "page": 3
+    },
+    {
+      "id": "B-6",
+      "section": "B",
+      "number": "6",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "FIFO and LRU page replacement numerical",
+      "topic_ids": [
+        "t-page-replacement"
+      ],
+      "question_type": "numerical",
+      "page": 3
+    },
+    {
+      "id": "C-7a",
+      "section": "C",
+      "number": "7a",
+      "marks": 20,
+      "or_group": "C-Q7",
+      "descriptor": "Four deadlock conditions and recovery methods",
+      "topic_ids": [
+        "t-deadlock-conditions-rag",
+        "t-deadlock-detection-recovery"
+      ],
+      "question_type": "theory",
+      "page": 4
+    },
+    {
+      "id": "C-7b",
+      "section": "C",
+      "number": "7b",
+      "marks": 20,
+      "or_group": "C-Q7",
+      "descriptor": "Dining philosophers problem solution using semaphores",
+      "topic_ids": [
+        "t-classical-ipc",
+        "t-semaphores-mutex"
+      ],
+      "question_type": "theory",
+      "page": 4
+    },
+    {
+      "id": "C-8a",
+      "section": "C",
+      "number": "8a",
+      "marks": 20,
+      "or_group": "C-Q8",
+      "descriptor": "Disk scheduling algorithms SSTF SCAN comparison",
+      "topic_ids": [
+        "t-disk-scheduling"
+      ],
+      "question_type": "numerical",
+      "page": 5
+    },
+    {
+      "id": "C-8b",
+      "section": "C",
+      "number": "8b",
+      "marks": 20,
+      "or_group": "C-Q8",
+      "descriptor": "File allocation methods contiguous linked indexed",
+      "topic_ids": [
+        "t-file-allocation"
+      ],
+      "question_type": "theory",
+      "page": 5
+    }
+  ]
+}

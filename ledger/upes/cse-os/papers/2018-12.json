@@ -1,0 +1,213 @@
+{
+  "id": "upes/cse-os/2018-12",
+  "university": "upes",
+  "subject": "cse-os",
+  "sitting": "2018-12",
+  "course_code": "CSEG2007",
+  "set": "SET-01",
+  "max_marks": 100,
+  "source_url": "https://library.ddn.upes.ac.in/",
+  "synthetic": false,
+  "sections": [
+    {
+      "id": "A",
+      "attempt": 5,
+      "of": 5
+    },
+    {
+      "id": "B",
+      "attempt": 4,
+      "of": 5
+    },
+    {
+      "id": "C",
+      "attempt": 2,
+      "of": 2
+    }
+  ],
+  "questions": [
+    {
+      "id": "A-1a",
+      "section": "A",
+      "number": "1a",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Operating system definition and kernel functions",
+      "topic_ids": [
+        "t-os-types-structures"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1b",
+      "section": "A",
+      "number": "1b",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Process states transition diagram and dispatching",
+      "topic_ids": [
+        "t-process-states-pcb"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1c",
+      "section": "A",
+      "number": "1c",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Thread control block versus process control block",
+      "topic_ids": [
+        "t-threads-multithreading"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1d",
+      "section": "A",
+      "number": "1d",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Logical versus physical address space concepts",
+      "topic_ids": [
+        "t-logical-physical-address"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "A-1e",
+      "section": "A",
+      "number": "1e",
+      "marks": 4,
+      "or_group": null,
+      "descriptor": "Sequential and direct access file methods",
+      "topic_ids": [
+        "t-file-attributes-operations"
+      ],
+      "question_type": "short",
+      "page": 1
+    },
+    {
+      "id": "B-2",
+      "section": "B",
+      "number": "2",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Non-preemptive SJF and Priority scheduling calculation",
+      "topic_ids": [
+        "t-cpu-scheduling"
+      ],
+      "question_type": "numerical",
+      "page": 2
+    },
+    {
+      "id": "B-3",
+      "section": "B",
+      "number": "3",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Semaphores implementation of mutual exclusion primitive",
+      "topic_ids": [
+        "t-semaphores-mutex"
+      ],
+      "question_type": "theory",
+      "page": 2
+    },
+    {
+      "id": "B-4",
+      "section": "B",
+      "number": "4",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Banker algorithm safety algorithm matrix calculation",
+      "topic_ids": [
+        "t-bankers-algorithm"
+      ],
+      "question_type": "numerical",
+      "page": 2
+    },
+    {
+      "id": "B-5",
+      "section": "B",
+      "number": "5",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "Paging architecture page table and offset calculation",
+      "topic_ids": [
+        "t-paging-and-tlb"
+      ],
+      "question_type": "numerical",
+      "page": 3
+    },
+    {
+      "id": "B-6",
+      "section": "B",
+      "number": "6",
+      "marks": 10,
+      "or_group": null,
+      "descriptor": "FIFO and Optimal page replacement numerical",
+      "topic_ids": [
+        "t-page-replacement"
+      ],
+      "question_type": "numerical",
+      "page": 3
+    },
+    {
+      "id": "C-7a",
+      "section": "C",
+      "number": "7a",
+      "marks": 20,
+      "or_group": "C-Q7",
+      "descriptor": "Deadlock prevention strategies for four Coffman conditions",
+      "topic_ids": [
+        "t-deadlock-conditions-rag"
+      ],
+      "question_type": "theory",
+      "page": 4
+    },
+    {
+      "id": "C-7b",
+      "section": "C",
+      "number": "7b",
+      "marks": 20,
+      "or_group": "C-Q7",
+      "descriptor": "Producer consumer bounded buffer problem with semaphores",
+      "topic_ids": [
+        "t-classical-ipc",
+        "t-semaphores-mutex"
+      ],
+      "question_type": "theory",
+      "page": 4
+    },
+    {
+      "id": "C-8a",
+      "section": "C",
+      "number": "8a",
+      "marks": 20,
+      "or_group": "C-Q8",
+      "descriptor": "Disk scheduling FCFS SSTF and SCAN comparison",
+      "topic_ids": [
+        "t-disk-scheduling"
+      ],
+      "question_type": "numerical",
+      "page": 5
+    },
+    {
+      "id": "C-8b",
+      "section": "C",
+      "number": "8b",
+      "marks": 20,
+      "or_group": "C-Q8",
+      "descriptor": "Contiguous and indexed file allocation schemes",
+      "topic_ids": [
+        "t-file-allocation"
+      ],
+      "question_type": "theory",
+      "page": 5
+    }
+  ]
+}
